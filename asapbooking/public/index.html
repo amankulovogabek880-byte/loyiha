@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AsapBooking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-content">
+      <p>AsapBooking — arzon narxlar, qulay bron va ishonchli xizmat.</p>
+      <span class="top-badge">Maxsus takliflar mavjud</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="/" class="logo">
+        <div class="logo-icon">✈</div>
+        <div>
+          <h2>AsapBooking</h2>
+          <small>Premium sayohat xizmati</small>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#services">Xizmatlar</a>
+        <a href="#destinations">Manzillar</a>
+        <a href="#reviews">Mijozlar fikri</a>
+        <a href="#faq">Savollar</a>
+      </nav>
+
+      <a href="tel:+998901234567" class="call-btn nav-right">+998 90 123 45 67</a>
+
+      <button id="menuBtn" class="menu-btn">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="#services">Xizmatlar</a>
+      <a href="#destinations">Manzillar</a>
+      <a href="#reviews">Mijozlar fikri</a>
+      <a href="#faq">Savollar</a>
+      <a href="tel:+998901234567">Qo‘ng‘iroq qilish</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <h1>Arzon aviachiptalarni tez va oson toping</h1>
+        <p>
+          AsapBooking orqali foydali yo‘nalishlarni ko‘ring, bron qoldiring va
+          sizga mos takliflarni tezda oling.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#booking" class="primary-btn">Hozir bron qilish</a>
+          <a href="#destinations" class="secondary-btn">Mashhur manzillar</a>
+        </div>
+
+        <div class="mini-contact">
+          <span>Tez aloqa uchun</span>
+          <strong>+998 90 123 45 67</strong>
+        </div>
+      </div>
+
+      <div class="booking-card" id="booking">
+        <h2>Parvoz bron qilish</h2>
+
+        <form id="bookingForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="tripType">Parvoz turi</label>
+              <select id="tripType" required>
+                <option value="">Tanlang</option>
+                <option>Bir tomonga</option>
+                <option>Qaytish bilan</option>
+                <option>Ko‘p yo‘nalishli</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="travelers">Yo‘lovchilar</label>
+              <select id="travelers" required>
+                <option value="">Tanlang</option>
+                <option>1 kishi</option>
+                <option>2 kishi</option>
+                <option>3 kishi</option>
+                <option>4+ kishi</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="classType">Sinf</label>
+              <select id="classType" required>
+                <option value="">Tanlang</option>
+                <option>Ekonom</option>
+                <option>Biznes</option>
+                <option>Premium ekonom</option>
+              </select>
+            </div>
+
+            <div class="field span-2">
+              <label for="from">Qayerdan</label>
+              <input type="text" id="from" placeholder="Masalan: Toshkent" required />
+            </div>
+
+            <div class="field">
+              <label for="to">Qayerga</label>
+              <input type="text" id="to" placeholder="Masalan: Istanbul" required />
+            </div>
+
+            <div class="field">
+              <label for="departure">Jo‘nash sanasi</label>
+              <input type="date" id="departure" required />
+            </div>
+
+            <div class="field">
+              <label for="returnDate">Qaytish sanasi</label>
+              <input type="date" id="returnDate" />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="example@gmail.com" required />
+            </div>
+
+            <div class="field span-2">
+              <label for="name">Ism</label>
+              <input type="text" id="name" placeholder="To‘liq ismingiz" required />
+            </div>
+
+            <div class="field">
+              <label for="phone">Telefon raqam</label>
+              <input type="tel" id="phone" placeholder="+998 90 123 45 67" required />
+            </div>
+          </div>
+
+          <div class="booking-actions">
+            <button type="submit" class="submit-btn">So‘rov yuborish</button>
+            <a href="tel:+998901234567" class="quick-call-btn">Qo‘ng‘iroq qilish</a>
+          </div>
+
+          <p id="formMessage" class="form-message"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="destinations" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Mashhur manzillar</h2>
+        <p>Sayohatchilar ko‘p tanlaydigan yo‘nalishlarni ko‘ring.</p>
+      </div>
+
+      <div class="cards-grid" id="destinationsGrid"></div>
+
+      <div class="show-more-wrap">
+        <button id="showMoreBtn" class="show-more-btn">Ko‘proq ko‘rish</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section gray">
+    <div class="container">
+      <div class="section-head">
+        <h2>Nega aynan AsapBooking?</h2>
+        <p>Tez bron, foydali narxlar va qulay xizmat bir joyda.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="icon">💸</div>
+          <h3>Arzon narxlar</h3>
+          <p>Ko‘plab yo‘nalishlar bo‘yicha foydali takliflarni topish oson.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="icon">⚡</div>
+          <h3>Tez bron</h3>
+          <p>Forma oddiy va tushunarli, so‘rov yuborish bir necha daqiqa vaqt oladi.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="icon">📞</div>
+          <h3>Tez aloqa</h3>
+          <p>Qo‘ng‘iroq yoki so‘rov orqali siz bilan tez bog‘lanish mumkin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Mijozlar fikri</h2>
+        <p>AsapBooking haqida foydalanuvchilarning haqiqiy taassurotlari.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <h3>Aziza</h3>
+          <p>AsapBooking orqali chipta narxlari juda qulay chiqdi. Boshqa joylarga qaraganda ancha foydali taklif topdim.</p>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <h3>Sardor</h3>
+          <p>Menga eng yoqqani narxlar va tez aloqa bo‘ldi. Juda ko‘p vaqt ketmadi, hammasi tez hal bo‘ldi.</p>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <h3>Madina</h3>
+          <p>Sayohat uchun arzonroq variant qidirayotgandim, shu yerda o‘zimga mos va yaxshi taklif topdim.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section gray">
+    <div class="container">
+      <div class="section-head">
+        <h2>Ko‘p beriladigan savollar</h2>
+        <p>Bron qilishdan oldin foydalanuvchilar ko‘p so‘raydigan savollar.</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Chipta bron qilish qanday ishlaydi?</h3>
+          <p>Kerakli ma’lumotlarni kiriting, so‘rov yuboring va sizga mos variantlar bo‘yicha bog‘laniladi.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Narxlar qulaymi?</h3>
+          <p>Ha, AsapBooking foydalanuvchilar uchun foydali va arzonroq takliflarni topishga yordam beradi.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Qaytish bilan bron qilsam bo‘ladimi?</h3>
+          <p>Ha, bir tomonga yoki qaytish bilan bron qilish mumkin.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Telefon orqali bog‘lansam bo‘ladimi?</h3>
+          <p>Ha, albatta. Saytdagi qo‘ng‘iroq tugmasi orqali tez bog‘lanishingiz mumkin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>AsapBooking</h3>
+        <p>Arzon aviachiptalar va qulay bron xizmati.</p>
+      </div>
+      <div>
+        <p>Telefon: +998 90 123 45 67</p>
+        <p>Email: info@asapbooking.uz</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
